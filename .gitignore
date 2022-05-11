@@ -1,0 +1,6 @@
+venv/
+core/migrations/
+media/
+video_data.txt
+.idea/
+*.pyc
