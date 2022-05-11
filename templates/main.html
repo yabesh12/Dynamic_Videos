@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <table id="table_id">
+        <p>{{ dyna.title }}</p>
+          {% for video in video_objects %}
+          <video width="420" id="" height="340" controls autoplay>
+              <source src="{{ video.file.url }}" type="video/mp4">
+          </video>
+          {% endfor %}
+    </table>
+
+    <script>
+        {% for video in video_objects %}
+            let {{ video.vid }} = new DataTable('#{{ video.vid }}', {
+                // options
+            });
+        {% endfor %}
+    </script>
+
+{% endblock %}
